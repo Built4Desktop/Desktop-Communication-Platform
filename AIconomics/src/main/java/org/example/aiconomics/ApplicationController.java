@@ -1,14 +1,16 @@
 package org.example.aiconomics;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import static java.lang.System.exit;
 
 public class ApplicationController {
-    @FXML
-    private Label welcomeText;
 
     @FXML
-    protected void onMessageButtonClick() {
-        welcomeText.setText("Welcome to The AIconomics Application!");
+    public ScrollPane sidebarScroll;
+
+    @FXML
+    protected void handleLogoutButtonAction() {
+        exit(0);
     }
 }

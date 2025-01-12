@@ -11,8 +11,9 @@ public class AIconomicsApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(AIconomicsApplication.class.getResource("Application-Main.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1080, 720);
-        stage.setTitle("AiConomics - Main");
+        Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
+        stage.setTitle("Aiconomics - Main");
+        stage.centerOnScreen();
         stage.setScene(scene);
         stage.show();
     }

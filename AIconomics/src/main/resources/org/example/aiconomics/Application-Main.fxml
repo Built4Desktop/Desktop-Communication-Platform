@@ -1,16 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ScrollPane.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.aiconomics.ApplicationController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<HBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@styles.css"
+      fx:controller="org.example.aiconomics.ApplicationController"
+      style="-fx-background-color: #F8F9FA;" prefWidth="1280" prefHeight="720">
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Message!" onAction="#onMessageButtonClick"/>
-</VBox>
+    <!-- Sidebar with Scrollable Content -->
+    <ScrollPane fx:id="sidebarScroll" style="-fx-background-color: transparent; -fx-border-width: 0;" prefWidth="250" vbarPolicy="ALWAYS">
+        <VBox style="-fx-background-color: #6C63FF; -fx-padding: 20; -fx-spacing: 20;">
+
+            <!-- Main Category -->
+            <Label text="Main" style="-fx-font-size: 18; -fx-text-fill: white; -fx-font-weight: bold;" />
+            <Button text="Dashboard" styleClass="sidebar-button" />
+            <Button text="Documents" styleClass="sidebar-button" />
+            <Button text="Messages" styleClass="sidebar-button" />
+
+            <!-- Economy/Financials Category -->
+            <Label text="Economy/Financials" style="-fx-font-size: 18; -fx-text-fill: white; -fx-font-weight: bold;" />
+            <Button text="Economy and Investments" styleClass="sidebar-button" />
+            <Button text="Accounts" styleClass="sidebar-button" />
+            <Button text="Job Applications" styleClass="sidebar-button" />
+            <Button text="Logistics and Distribution" styleClass="sidebar-button" />
+
+            <!-- Company Category -->
+            <Label text="Company" style="-fx-font-size: 18; -fx-text-fill: white; -fx-font-weight: bold;" />
+            <Button text="Employees" styleClass="sidebar-button" />
+            <Button text="Company Structure" styleClass="sidebar-button" />
+            <Button text="Projects" styleClass="sidebar-button" />
+
+            <!-- Account Category -->
+            <Label text="Account" style="-fx-font-size: 18; -fx-text-fill: white; -fx-font-weight: bold;" />
+            <Button text="Profile" styleClass="sidebar-button" />
+            <Button text="Settings" styleClass="sidebar-button" />
+            <Button text="Logout" styleClass="sidebar-button" onAction="#handleLogoutButtonAction"/>
+        </VBox>
+    </ScrollPane>
+
+    <!-- Main Content -->
+    <VBox style="-fx-padding: 20;" spacing="20">
+        <Label text="Welcome to the Dashboard" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #333333;" />
+
+        <TableView>
+            <!-- Define columns and data here -->
+        </TableView>
+    </VBox>
+
+</HBox>
