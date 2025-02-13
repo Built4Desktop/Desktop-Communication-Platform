@@ -1,14 +1,9 @@
-# AIconomics
-AI Powered Financial Management System (Desktop Application)
-
+#  Desktop-Communication-Platform
 
 Plan:
-
 Desktop application with JavaFx library.
+Inspired by Discord, Skype and other communication platforms
 
-Using AI chatbot for Financial help and guidance.
-
-Financial manegment System with multiple different management structures and easily editable configurations.
 
 
 
