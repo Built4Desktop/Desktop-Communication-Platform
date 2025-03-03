@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ScrollPane.*?>
+
+<HBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@styles.css"
+      fx:controller="org.example.desktopcommunicationapp.ApplicationController"
+      style="-fx-background-color: #F8F9FA;" prefWidth="1280" prefHeight="720">
+
+    <!-- Sidebar with Scrollable Content -->
+    <ScrollPane fx:id="sidebarScroll" style="-fx-background-color: transparent; -fx-border-width: 0;" prefWidth="250" vbarPolicy="ALWAYS">
+        <VBox style="-fx-background-color: #6C63FF; -fx-padding: 20; -fx-spacing: 20;" minHeight="720">
+
+            <!-- Main Category -->
+            <Label text="Main Panel" style="-fx-font-size: 18; -fx-text-fill: white; -fx-font-weight: bold;" />
+            <Button text="Dashboard" styleClass="sidebar-button" />
+
+            <!-- Friends and groups Category -->
+            <Label text="Friends / Groups" style="-fx-font-size: 18; -fx-text-fill: white; -fx-font-weight: bold;" />
+            <Button text="Friends" styleClass="sidebar-button" />
+            <Button text="Groups" styleClass="sidebar-button" />
+
+            <!-- Communities/Organisation Category -->
+            <Label text="Servers" style="-fx-font-size: 18; -fx-text-fill: white; -fx-font-weight: bold;" />
+            <Button text="Communities" styleClass="sidebar-button" />
+            <Button text="Organisations" styleClass="sidebar-button" />
+
+            <!-- Account Category -->
+            <Label text="Account" style="-fx-font-size: 18; -fx-text-fill: white; -fx-font-weight: bold;" />
+            <Button text="Profile" styleClass="sidebar-button" />
+            <Button text="Settings" styleClass="sidebar-button" />
+            <Button text="Logout" styleClass="sidebar-button" onAction="#handleLogoutButtonAction"/>
+        </VBox>
+    </ScrollPane>
+
+    <!-- Main Content -->
+    <VBox style="-fx-padding: 20;" spacing="20">
+        <Label text="Welcome to the Dashboard" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #333333;" />
+
+        <TableView>
+            <!-- Define columns and data here -->
+        </TableView>
+    </VBox>
+
+</HBox>
